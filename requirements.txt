@@ -1,0 +1,7 @@
+redis
+hiredis
+beautifulsoup4
+flask
+raven
+raven[flask]
+lxml

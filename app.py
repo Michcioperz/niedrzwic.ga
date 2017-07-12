@@ -55,6 +55,8 @@ def get_page(page):
     if cache is not None:
         content_json = cache.get(REDIS_PAGE_SCHEMA.format(page=page))
         if content_json is not None:
+            if type(content_json) == bytes:
+                content_json = content_json.decode('utf-8')
             content = json.loads(content_json)
     if content is None:
         content = fetch_page(page)

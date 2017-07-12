@@ -6,3 +6,4 @@ raven
 raven[flask]
 lxml
 pytz
+requests
